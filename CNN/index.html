@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./assets/images/supreSVG.svg" type="image/svg+xml">
+  <title>Proyecto Final</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Agrega la siguiente línea para incluir Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-qLrXnG0tB4JiRGcGtXnz8anoNvOXH4o5cFEyAyoN/LG7VxMZ3+Ck+Qz+foR5j/JowvjwGqu4Z0qpxARei0NMCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="header">
+    <div id="title-container">
+      <h1 id="title">Computo Bioinspirado</h1>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h1>PF: Predicciones de Raza de perros</h1>
+      <p>
+        Se realizo una Red neuronal para predecir la raza del perro en tiempo real, para ello se utilizo la libreria
+        de Tensorflow.js,
+        la cual es una biblioteca de JavaScript de codigo abierto desarrollada por Google para
+        entrenar y desplegar modelos de aprendizaje automatico en el navegador y en Node.js.
+      </p>
+    </section>
+    <section>
+      <form>
+        <div>
+          <input type="file" id="archivoInput" accept="image/*">
+          <!-- Agregado: Icono de carga -->
+          <label for="archivoInput" class="file-upload"></label>
+        </div>
+        <button type="button" onclick="predict()">Predecir</button>
+      </form>
+      <div>
+        <br>
+        <br>
+        <label for="resultado" class="form-label">Resultado: </label>
+        <div id="resultado"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2023 - Jorge Ivan - Diego Merino</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

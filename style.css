@@ -1,74 +1,168 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f9;
-    margin: 0;
+/* Definición de la fuente personalizada */
+@font-face {
+  font-family: 'DrukText';
+  src: url('./assets/fonts/DrukText-Bold-Trial.otf');
 }
 
-.chat-container {
-    width: 400px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+body {
+  margin: 0;
+  font-family: 'DrukText', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #1d1d1d;
+  padding: 5px; /* Ajuste para pantallas pequeñas */
+  overflow: hidden;
+}
+
+main {
+  text-align: center;
+  padding: 2%; /* Ajuste para pantallas pequeñas */
+  border-radius: 10px;
+  background-color: #e6e6e6;
+  max-width: 100%; /* Ancho completo para pantallas pequeñas */
+  box-shadow: 2px 2px 15px rgb(255, 255, 255);
+  margin: 10px auto; /* Centrar en pantallas pequeñas */
+}
+
+#title-container {
+  text-align: center;
+  margin-top: 20px !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1d1d1d;
+  padding: 10px 0;
+}
+
+#title {
+  font-size: 36px; /* Reducción para pantallas pequeñas */
+  text-shadow: 2px 2px 20px #d10069;
 }
 
 h1 {
-    text-align: center;
-    color: #333;
+  font-size: 24px; /* Reducción para pantallas pequeñas */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 20px #d10069;
+  color: #d10069;
 }
 
-#chatBox {
-    border: 1px solid #ddd;
-    padding: 10px;
-    height: 300px;
-    overflow-y: scroll;
-    margin-bottom: 10px;
-}
-
-.message {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.user-message {
-    background-color: #e1ffc7;
-    text-align: right;
-}
-
-.bot-message {
-    background-color: #f1f0f0;
+p {
+  color: #666;
 }
 
 form {
-    display: flex;
-}
-
-input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-right: 10px;
+  margin-top: 2%; /* Ajuste para pantallas pequeñas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #333;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
+  font-family: 'DrukText', sans-serif;
+  font-size: 14px; /* Reducción para pantallas pequeñas */
+  margin-top: 2%; /* Ajuste para pantallas pequeñas */
+  padding: 5px 10px;
+  background-color: #ff0077;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #555;
+  background-color: #313131;
 }
 
-input[type="file"] {
-    display: block;
+.form-label {
+  display: block;
+  font-family: 'DrukText', sans-serif;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+#resultado {
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff0077;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #ff0077;
+  box-shadow: 0 6px 10px rgba(192, 0, 96, 0.795);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+form {
+  animation: fadeIn 2s ease;
+}
+
+.footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0.1px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 10px; /* Reducción para pantallas pequeñas */
+  box-shadow: 2px 2px 20px #ffffffc4;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    padding: 10px;
+  }
+
+  main {
+    max-width: 100%;
+    margin: 15px auto;
+  }
+
+  #title {
+    font-size: 26px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 15px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
